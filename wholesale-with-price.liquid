@@ -1,5 +1,5 @@
 {% for variant in product.variants %}{% assign title = variant.title | handle %}{% if title contains 'wholesale' %}{% assign wholesale-product = true %}{% endif %}{% endfor %}
-{% if customer %}{% if customer.tags contains 'Wholesale' or customer.tags contains 'wholesale' %}{% assign wholesale-customer = true %}{% endif %}
+{% if customer %}{% if customer.tags contains 'Wholesale' or customer.tags contains 'wholesale' %}{% assign wholesale-customer = true %}{% endif %}{% endif %}
 {% if wholesale-customer and wholesale-product %}{% assign wholesale = true %}{% endif %}
 
 {% assign price = product.price_max %}
